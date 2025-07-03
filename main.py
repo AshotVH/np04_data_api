@@ -10,11 +10,11 @@ CORS(app)
 
 @app.route('/test')
 def test():
-    return "test"
+    return 'test'
 
 @app.route('/')
 def index():
-    return "asd"
+    return 'asd'
     # return(API_ADDRESS)
 
 # @app.route('/np04cachedvals', methods=['GET'])
