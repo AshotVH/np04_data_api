@@ -12,6 +12,10 @@ CORS(app)
 
 API_ADDRESS = os.environ.get("API_ADDRESS")
 
+@app.route('/test')
+def test():
+    return ("test")
+
 @app.route('/')
 def index():
     return ("asd")
