@@ -10,6 +10,7 @@ CORS(app)
 
 @app.route('/test')
 def test():
+    print("Route / is defined")
     return 'test'
 
 @app.route('/')
