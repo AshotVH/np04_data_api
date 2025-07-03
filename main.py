@@ -12,6 +12,9 @@ CORS(app)
 
 API_ADDRESS = os.environ.get("API_ADDRESS")
 
+@app.route('/')
+def index():
+    return(API_ADDRESS)
 
 @app.route('/np04cachedvals', methods=['GET'])
 def np04cachedvals():
