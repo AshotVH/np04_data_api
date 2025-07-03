@@ -1,3 +1,5 @@
+print("log 0")
+
 from flask import Flask, request
 from flask_cors import CORS
 import requests
