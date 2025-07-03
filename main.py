@@ -2,19 +2,24 @@ from flask import Flask, request
 from flask_cors import CORS
 import requests
 import os
+print("log 1")
+
 app = Flask(__name__)
+print("log 2")
 
 CORS(app)
 
 # API_ADDRESS = os.environ.get("API_ADDRESS")
 
+
 @app.route('/test')
 def test():
-    print("Route / is defined")
+    print("Route /test is defined")
     return 'test'
 
 @app.route('/')
 def index():
+    print("Route / is defined")
     return 'asd'
     # return(API_ADDRESS)
 
