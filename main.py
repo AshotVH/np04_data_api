@@ -4,10 +4,6 @@ import requests
 import os
 app = Flask(__name__)
 
-allowed_origins = [
-    "https://np04-slow-control.app.cern.ch"
-]
-
 CORS(app)
 
 # API_ADDRESS = os.environ.get("API_ADDRESS")
