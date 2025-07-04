@@ -22,7 +22,7 @@ def boo():
 
 @app.route('/')
 def index():
-    return 'asdiopiop'
+    return 'asdiopiopop'
     # return(API_ADDRESS)
 
 # @app.route('/np04cachedvals', methods=['GET'])
