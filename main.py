@@ -16,6 +16,10 @@ API_ADDRESS = os.environ.get("API_ADDRESS")
 def test():
     return 'test'
 
+@app.route('/boo')
+def boo():
+    return 'boo'
+
 @app.route('/')
 def index():
     return 'asdiopiop'
