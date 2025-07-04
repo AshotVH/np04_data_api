@@ -22,7 +22,7 @@ def boo():
 
 @app.route('/')
 def index():
-    return 'index'
+    return 'new-index'
 
 
 @app.route('/np04cachedvals', methods=['GET'])
