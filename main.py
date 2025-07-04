@@ -1,5 +1,3 @@
-print("log 0")
-
 from flask import Flask, request
 from flask_cors import CORS
 import requests
@@ -11,7 +9,7 @@ print("log 2")
 
 CORS(app)
 
-# API_ADDRESS = os.environ.get("API_ADDRESS")
+API_ADDRESS = os.environ.get("API_ADDRESS")
 
 
 @app.route('/test')
@@ -22,8 +20,8 @@ def test():
 @app.route('/')
 def index():
     print("Route / is defined")
-    return 'asd'
-    # return(API_ADDRESS)
+    # return 'asd'
+    return(API_ADDRESS)
 
 # @app.route('/np04cachedvals', methods=['GET'])
 # def np04cachedvals():
