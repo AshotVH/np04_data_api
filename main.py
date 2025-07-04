@@ -18,8 +18,8 @@ def test():
 
 @app.route('/')
 def index():
-    # return 'asd'
-    return(API_ADDRESS)
+    return 'asdiopiop'
+    # return(API_ADDRESS)
 
 # @app.route('/np04cachedvals', methods=['GET'])
 # def np04cachedvals():
