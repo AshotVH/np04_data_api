@@ -25,17 +25,17 @@ def np04cachedvals():
 @app.route('/np04histogram/<elem_id>/<start_date>/<end_date>')
 def np04histogram(start_date, end_date, elem_id):
     response = requests.get(f"{API_ADDRESS}/range/{start_date}/{end_date}/{elem_id}")
-    return response.json()
+    return jsonify(response.json())
 
 @app.route('/np04histogram_average/<elem_id>/<start_date>/<end_date>')
 def np04histogram_average(start_date, end_date, elem_id):
     response  = requests.get(f"{API_ADDRESS}/average/{start_date}/{end_date}/{elem_id}")
-    return response.json()
+    return jsonify(response.json())
 
 @app.route('/sensorname/<elem_id>/')
 def sensorname(elem_id):
     response = requests.get(f"{API_ADDRESS}/sensor-name/{elem_id}")
-    return response.json()
+    return jsonify(response.json())
 
 
 
