@@ -1,4 +1,5 @@
 flask
 requests
+simplejson
 flask-cors
 gunicorn
