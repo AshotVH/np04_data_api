@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, jsonify
 from flask_cors import CORS
 import requests
 import os
@@ -12,17 +12,6 @@ CORS(app)
 API_ADDRESS = os.environ.get("API_ADDRESS")
 
 
-@app.route('/test')
-def test():
-    return 'test'
-
-@app.route('/boo')
-def boo():
-    return 'boo'
-
-@app.route('/')
-def index():
-    return 'new-index2'
 
 
 @app.route('/np04cachedvals', methods=['GET'])
@@ -30,7 +19,8 @@ def np04cachedvals():
     args = request.args
     elemName = args.get('elemname')
     response = requests.get(f"{API_ADDRESS}/latest/{elemName}")
-    return response.json()
+    return jsonify(response.json())
+
 
 @app.route('/np04histogram/<elem_id>/<start_date>/<end_date>')
 def np04histogram(start_date, end_date, elem_id):
