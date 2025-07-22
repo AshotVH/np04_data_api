@@ -33,7 +33,7 @@ def np04histogram_average(start_date, end_date, elem_id):
     response  = requests.get(f"{API_ADDRESS}/average/{start_date}/{end_date}/{elem_id}")
     return jsonify(response.json())
 
-@app.route('/sensorname/<elem_id>/')
+@app.route('/sensorname/<elem_id>')
 def sensorname(elem_id):
     response = requests.get(f"{API_ADDRESS}/sensor-name/{elem_id}")
     return jsonify(response.json())
