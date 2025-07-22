@@ -2,8 +2,7 @@ from flask import Flask, request, jsonify, Response
 from flask_cors import CORS
 import requests
 import os
-import simplejson as json
-import re
+
 app = Flask(__name__)
 
 
